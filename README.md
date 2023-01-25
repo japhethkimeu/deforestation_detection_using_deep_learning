@@ -3,7 +3,7 @@
 This projet entails the application of deep learning algorithms i.e. CNN to detect deforestation using satellite imagery.
 
 ## Data
-I analysed Sentinel-2 images (cloud free) of three different regions in the State of Mato Grosso in Brazil and derived a total of 5122 ***256 * 256*** image chips and masks. See a sample of training images and masks in the sample data folder.
+I analysed Sentinel-2 images (cloud free) of three different regions in the State of Mato Grosso in Brazil and derived a total of 5,122 image chips and masks of size ***256 * 256***. See a sample of training images and masks in the sample data folder.
 
 ## Data Augmentation
 Image chips were flipped left and right before fed into the network for training. See preprocess.py
