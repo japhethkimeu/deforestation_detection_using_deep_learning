@@ -2,14 +2,31 @@
 
 This projet entails the application of deep learning algorithms i.e. CNN to detect deforestation using satellite imagery.
 
-![results/predict_2.PNG](results/predict_2.PNG)
+## Data
+I analysed Sentinel-2 images (cloud free) of three different regions in the State of Mato Grosso in Brazil and derived a total of 5122 _* 256 * 256*_ image chips. See a sample of training images and masks in the sample data folder.
+
+## Data Augmentation
+Image chips were flipped left and right before fed into the network for training. See preprocess.py
+
+## Model
+Unet model was implemented by using MobileNetV2 as the feature extraction with pre-trained weights.
+
+![results/u-net-architecture.png](results/u-net-architecture.png)
+
+More on Unet model https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/
+
+## Training
+The model was trained first using the pre-trained weights of the base model for 15 epochs with early stopping. The best result was achieved by re-training the whole model for 20 epochs with a binary accuracy of 0.9780.
+
 
 ## Requirements
-< 
-- tensorflow
-- keras
-- numpy
-- matplotlib
-- pandas
-- cv2
-/>
+        - tensorflow
+        - keras
+        - numpy
+        - matplotlib
+        - pandas
+        - cv2
+        
+## Results
+
+![results/predict_2.PNG](results/predict_2.PNG)
